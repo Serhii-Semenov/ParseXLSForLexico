@@ -57,7 +57,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 $objPHPExcel->getActiveSheet()->setCellValue('A1', 'Financial Year')
                               ->setCellValue('B1', 'Financial Period')
                               ->setCellValue('C1', 'Country')
-                              ->setCellValue('D1', 'Date')
+                              ->setCellValue( 'D1', 'DateCreator' )
                               ->setCellValue('E1', 'Sales Value')
                               ->setCellValue('F1', 'Expenditure')
                               ;

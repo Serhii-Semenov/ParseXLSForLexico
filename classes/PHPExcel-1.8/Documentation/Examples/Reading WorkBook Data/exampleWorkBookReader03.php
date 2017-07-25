@@ -62,7 +62,7 @@ foreach($customPropertyList as $customPropertyName) {
 			break;
 		case 'd' :	//	date
 			$propertyValue = date('l, d<\s\up>S</\s\up> F Y g:i A',$propertyValue);
-			$propertyType = 'date';
+			$propertyType = 'DateCreator';
 			break;
 		case 'b' :	//	boolean
 			$propertyValue = ($propertyValue) ? 'TRUE' : 'FALSE';

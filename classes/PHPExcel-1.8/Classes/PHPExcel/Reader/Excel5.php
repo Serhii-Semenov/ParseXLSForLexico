@@ -419,6 +419,11 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
         $this->readFilter = new PHPExcel_Reader_DefaultReadFilter();
     }
 
+    public function __clone()
+    {
+        // TODO: Implement __clone() method.
+    }
+
     /**
      * Can the current PHPExcel_Reader_IReader read the file?
      *
@@ -5873,7 +5878,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
                         $args = 0;
                         break;
                     case 65:
-                        $function = 'DATE';
+                        $function = 'DateCreator';
                         $args = 3;
                         break;
                     case 66:

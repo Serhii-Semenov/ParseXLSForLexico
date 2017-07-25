@@ -333,7 +333,7 @@ class PHPExcel_Worksheet_AutoFilter
             } elseif ($cellValue == floor($cellValue)) {
                 //    Just the date part
                 $dtVal = date('Ymd', $dateValue);
-                $dateSet = $dateSet['date'];
+                $dateSet = $dateSet[ 'DateCreator' ];
             } else {
                 //    date and time parts
                 $dtVal = date('YmdHis', $dateValue);
@@ -624,9 +624,9 @@ class PHPExcel_Worksheet_AutoFilter
                     } else {
                         //    Filter on date group values
                         $arguments = array(
-                            'date' => array(),
-                            'time' => array(),
-                            'dateTime' => array(),
+                            'DateCreator' => array() ,
+                            'time' => array() ,
+                            'dateTime' => array() ,
                         );
                         foreach ($ruleDataSet as $ruleValue) {
                             $date = $time = '';
@@ -655,12 +655,12 @@ class PHPExcel_Worksheet_AutoFilter
                                 $time .= sprintf('%02d', $ruleValue[PHPExcel_Worksheet_AutoFilter_Column_Rule::AUTOFILTER_RULETYPE_DATEGROUP_SECOND]);
                             }
                             $dateTime = $date . $time;
-                            $arguments['date'][] = $date;
+                            $arguments[ 'DateCreator' ][] = $date;
                             $arguments['time'][] = $time;
                             $arguments['dateTime'][] = $dateTime;
                         }
                         //    Remove empty elements
-                        $arguments['date'] = array_filter($arguments['date']);
+                        $arguments[ 'DateCreator' ] = array_filter( $arguments[ 'DateCreator' ]);
                         $arguments['time'] = array_filter($arguments['time']);
                         $arguments['dateTime'] = array_filter($arguments['dateTime']);
                         $columnFilterTests[$columnID] = array(

@@ -361,7 +361,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
                         $docProps->setCreator($propertyValue);
                         $docProps->setLastModifiedBy($propertyValue);
                         break;
-                    case 'date':
+                    case 'DateCreator':
                         $creationDate = strtotime($propertyValue);
                         $docProps->setCreated($creationDate);
                         $docProps->setModified($creationDate);
@@ -396,8 +396,8 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
                                 $propertyValueName = (string) $value;
                             } elseif ($key == 'value-type') {
                                 switch ($value) {
-                                    case 'date':
-                                        $propertyValue = PHPExcel_DocumentProperties::convertProperty($propertyValue, 'date');
+                                    case 'DateCreator':
+                                        $propertyValue = PHPExcel_DocumentProperties::convertProperty( $propertyValue, 'DateCreator' );
                                         $propertyValueType = PHPExcel_DocumentProperties::PROPERTY_TYPE_DATE;
                                         break;
                                     case 'boolean':
@@ -579,7 +579,7 @@ class PHPExcel_Reader_OOCalc extends PHPExcel_Reader_Abstract implements PHPExce
                                                 }
                                             }
                                             break;
-                                        case 'date':
+                                        case 'DateCreator':
                                             $type = PHPExcel_Cell_DataType::TYPE_NUMERIC;
                                             $dateObj = new DateTime($cellDataOfficeAttributes['date-value'], $GMT);
                                             $dateObj->setTimeZone($timezoneObj);

@@ -258,7 +258,7 @@ class PHPExcel_Reader_Gnumeric extends PHPExcel_Reader_Abstract implements PHPEx
                             $docProps->setCreator(trim($propertyValue));
                             $docProps->setLastModifiedBy(trim($propertyValue));
                             break;
-                        case 'date':
+                        case 'DateCreator':
                             $creationDate = strtotime(trim($propertyValue));
                             $docProps->setCreated($creationDate);
                             $docProps->setModified($creationDate);

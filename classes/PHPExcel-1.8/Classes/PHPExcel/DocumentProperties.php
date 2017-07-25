@@ -530,7 +530,7 @@ class PHPExcel_DocumentProperties
             case 'bstr':      //    Basic String
                 return $propertyValue;
                 break;
-            case 'date':      //    Date and Time
+            case 'DateCreator':      //    Date and Time
             case 'filetime':  //    File Time
                 return strtotime($propertyValue);
                 break;
@@ -583,7 +583,7 @@ class PHPExcel_DocumentProperties
             case 'bstr':     //    Basic String
                 return self::PROPERTY_TYPE_STRING;
                 break;
-            case 'date':     //    Date and Time
+            case 'DateCreator':     //    Date and Time
             case 'filetime': //    File Time
                 return self::PROPERTY_TYPE_DATE;
                 break;

@@ -92,7 +92,7 @@ $objPHPExcel->getActiveSheet()->setCellValue('A8', 'Boolean')
 
 $dateTimeNow = time();
 $objPHPExcel->getActiveSheet()->setCellValue('A9', 'Date/Time')
-                              ->setCellValue('B9', 'Date')
+                              ->setCellValue( 'B9', 'DateCreator' )
                               ->setCellValue('C9', PHPExcel_Shared_Date::PHPToExcel( $dateTimeNow ));
 $objPHPExcel->getActiveSheet()->getStyle('C9')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_DATE_YYYYMMDD2);
 

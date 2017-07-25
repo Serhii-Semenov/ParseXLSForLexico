@@ -30,7 +30,7 @@ class PHPExcel_Cell_DataValidation
     /* Data validation types */
     const TYPE_NONE        = 'none';
     const TYPE_CUSTOM      = 'custom';
-    const TYPE_DATE        = 'date';
+    const TYPE_DATE        = 'DateCreator';
     const TYPE_DECIMAL     = 'decimal';
     const TYPE_LIST        = 'list';
     const TYPE_TEXTLENGTH  = 'textLength';
