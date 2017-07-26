@@ -145,7 +145,7 @@ class RoutePeriodTable
                     $row[2],
                     $row[3],
                     $row[4],
-                    false
+                    $row[5]
                 ];
             }
         }
@@ -178,7 +178,7 @@ class RoutePeriodTable
                 break;
                 return [$c, true];
         }
-        return [$bit, (bool)false];
+        return [$bit, false];
     }
 
     private function getTime($time, $week, $start)
@@ -232,8 +232,6 @@ class RoutePeriodTable
                     ];
                 }
             }
-
-
         return ['Error', (bool)true];
     }
 

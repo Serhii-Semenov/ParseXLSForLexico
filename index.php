@@ -3,6 +3,10 @@
  * index
  */
 
+//phpinfo();
+//
+//exit();
+
 // not realy good idea:>
 ini_set('memory_limit', '-1');
 
@@ -15,8 +19,8 @@ spl_autoload_register (
 // За получение двух массивов с правильными и неправильными данными отвечает class ResultCreator;
 // путь к файлу передаем в конструктор
 
- $e = new ResultCreator( dirname( __FILE__) . '/data/iBasis.xls');
-// $e = new ResultCreator(dirname(__FILE__).'/data/iBasisLightErr.xls');
+// $e = new ResultCreator( dirname( __FILE__) . '/data/iBasis.xls');
+ $e = new ResultCreator(dirname(__FILE__).'/data/iBasisLightErr.xls');
 // $e = new ResultCreator(dirname(__FILE__).'/data/iBasisLight.xls');
 // $e = new ResultCreator(dirname(__FILE__).'/data/Book1.xls');
 // $e = new ResultCreator(dirname(__FILE__).'/data/Book2.xls');

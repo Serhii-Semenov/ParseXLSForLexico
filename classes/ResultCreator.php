@@ -20,7 +20,7 @@ class ResultCreator
     public $RoutePeriodSheet;
     public $RoutePeriod;
 
-    public $ArrCoorect;
+    public $ArrCorrect;
     public $ArrIncorrect;
 
     public $ErrorSheetsInFile = false;
@@ -36,7 +36,7 @@ class ResultCreator
 
     public function PrintArrCoorect()
     {
-        if (!is_null ($this->ArrCoorect))$this->printBigTable ($this->ArrCoorect);
+        if (!is_null ($this->ArrCorrect))$this->printBigTable ( $this->ArrCorrect);
     }
 
     public function PrintArrIncorrect()
@@ -183,7 +183,7 @@ class ResultCreator
             }
             else
             {
-                $this->ArrCoorect[] = [
+                $this->ArrCorrect[] = [
                     $prefix,            // [0] prefix
                     $destination,       // [1] destination
                     $resultBase[ 1 ],   // [2] price

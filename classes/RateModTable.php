@@ -83,7 +83,8 @@ class RateModTable
         $error = false;
         $ratePerMinute = $row[$this->RULE_FIELDS[2][2]];
         $partsOfFloat = explode ('.', $ratePerMinute);
-        if (count($partsOfFloat) == 2 && is_numeric ($partsOfFloat[0]) && is_numeric ($partsOfFloat[1]))
+        if (count($partsOfFloat) == 2 && is_numeric ($partsOfFloat[0]) && is_numeric ($partsOfFloat[1])
+                && (float)$ratePerMinute > 0)
         {
             $ratePerMinute = number_format ((float)$ratePerMinute,  5 ,  '.', ' ' );
         }
